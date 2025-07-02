@@ -1,0 +1,16 @@
+Body{
+    background-color: #07131F;
+}
+
+.splash-screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash-screen .logo-container img{
+    width: 65vw;
+    height: auto;
+    animation: fadeIn 2s ease-in-out;
+}
