@@ -207,14 +207,14 @@ Body{
     /* margin-left: 10px; */
 }
 
-.menu-container .menu-content .left-side .hearts{
+.hearts{
     display: flex;
     align-items: center;
     justify-content: left;
     margin-top: 3px;
 }
 
-.menu-container .menu-content .left-side .hearts .heart{
+.hearts .heart{
     width: 25px;
     height: 25px;
     background-image: url('./images/heart.png'); /* Updated path */
@@ -259,6 +259,8 @@ Body{
     /* position: relative; */
     transition: margin-left 0.3s ease-in-out;
     position: absolute;
+    bottom: 0;
+    z-index: 1;
 }
 
 .chat-sidebar{
@@ -279,6 +281,21 @@ Body{
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+}
+
+.chat-message .player-font{
+    font-family: 'EngraversGothic', serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #f6265a;
+    font-size: 0.9rem;
+}
+
+.chat-message p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin-top: 2px;
+    margin-bottom: 0px;
 }
 
 /* Target the vertical scrollbar */
@@ -371,6 +388,75 @@ Body{
     border-radius: 20px 0px 0px 20px ;
 }
 
+.player-stats-down{
+    width: 100vw;
+    min-height: 100px;
+    background-color: #ffffffd2;
+    /* position: fixed; */
+    bottom: 0;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+}
+
+.player-stats-down .player-stat{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-stats-down .player-stats{
+    margin-left: 20px;
+}
+
+@media  screen and (min-width: 1200px) {
+    .player-stats-down{
+        display: none;
+    }
+}
+
+.player-stats-sidebar .player-stat{
+    padding: 15px 35px 15px 30px;
+}
+
+.player-stat .player-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.player-stat .player-stats .stat {
+    height: 40px;
+    font-weight: normal;
+}
+
+.player-stat .player-stats .stat {
+    display: flex;
+    align-items: center;
+}
+
+.player-stat .player-stats .stat .flex img {
+    width: 23px;
+    height: auto;
+    margin-right: 20px;
+}
+.player-stat .player-stats .stat h3 {
+    font-weight: normal;
+}
+
+.player-name .player-font{
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.player-name .hearts{
+    margin-top: -10px;
+    margin-left: 20px;
+}
+
 .input-form{
     width: 100%;
     background-color: white;
@@ -434,6 +520,16 @@ Body{
     .menu-content {
         width: 80vw;
     }
+    .player-stats-sidebar{
+        display: none;
+    }
+    .game-area {
+        width: 70vw;
+        margin-left: 15vw;
+        aspect-ratio: 16 / 9;
+        /* height: 86vh; */
+        background-color: darkgray;
+    }
 }
 
 @media screen and (max-width: 860px) {
@@ -445,6 +541,15 @@ Body{
     }
     .menu-container .menu-content .left-side p{
         display: none;
+    }
+    .player-stats-down .player-stat {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .player-stats-down {
+        min-height: 250px;
     }
 }
 
