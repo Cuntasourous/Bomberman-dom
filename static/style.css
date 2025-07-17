@@ -3,6 +3,7 @@ Body{
     font-family: 'EngraversGothic', sans-serif;
     margin: 0 auto;
     padding: 0;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -129,12 +130,16 @@ Body{
     box-shadow: rgba(178, 117, 208, 0.4) 0px 5px, rgba(178, 117, 208, 0.3) 0px 10px, rgba(178, 117, 208, 0.2) 0px 15px, rgba(178, 117, 208, 0.1) 0px 20px, rgba(178, 117, 208, 0.05) 0px 25px;
 }
 
+.main-menu{
+    position: relative;
+}
+
 /* Game Dashboard Page */
 .menu-container {
     display: flex;
     align-items: stretch;
-    margin: 20px;
     height: 46px;
+    /* position: absolute; */
 }
 
 .menu-container .left-border-shape{
@@ -150,61 +155,77 @@ Body{
     background: white;
     height: 45.9px;
     min-width: 200px;
-    width: 50vw;
+    width: 55vw;
     flex: 1;
-}
-
-/* .border-left {
-    width: 83px;
-    height: 46px;
-    background: white;
-    clip-path: path('M 12 0 H 71 V 46 H 65 Q 56 46 48 42 L 12 0');
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    flex-shrink: 0;
-}
-
-.border-right {
-    width: 83px;
-    height: 46px;
-    background: white;
-    clip-path: path('M 12 0 H 71 V 46 H 65 Q 56 46 48 42 L 12 0');
-    transform: scaleX(-1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    flex-shrink: 0;
-} */
-
-
-/* .menu{
-    background-color: white;
-    border-radius: 0%;
     display: flex;
     align-items: center;
-    width: 100%;
-} */
+    justify-content: space-between;
+}
 
-
-/* .menu {
-    position: relative;
-    width: 1036px;
-    height: 46px;
-    background: white;
-    clip-path: path('M 0 0 L 1036 0 L 996 26 Q 996 46 976 46 L 60 46 Q 40 46 40 26 L 0 0');
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-} */
-
-/* .menu .left-side{
+.menu-container .menu-content .left-side{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 50%;
+    margin-top: -2px;
 }
 
-.menu .right-side{
+.menu-container .menu-content .left-side a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+}
+
+.menu-container .menu-content .left-side .seperator{
+    background-color: #D6D6D6;
+    width: 2px;
+    height: 20px;
+    font-size: 0.9rem;
+}
+
+.player-font{
+    font-family: 'EngraversGothic', serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: black;
+    /* margin-left: 10px; */
+}
+
+.menu-container .menu-content .left-side .hearts{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 50%;
-} */
+    justify-content: left;
+    margin-top: 3px;
+}
+
+.menu-container .menu-content .left-side .hearts .heart{
+    width: 25px;
+    height: 25px;
+    background-image: url('./images/heart.png'); /* Updated path */
+    background-size: cover;
+    /* margin-right: 5px; */
+}
+
+.menu-container .menu-content .right-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 27%;
+    margin-top: -2px;
+}
+
+.stat .flex{
+    display: flex;
+    align-items: center;
+}
+
+.stat .flex img{
+    width: 30px;
+    height: auto;
+    margin-right: 9px;
+}
 
 @media screen and (max-width: 900px) {
     .splash-screen .menu{
@@ -218,5 +239,79 @@ Body{
         width: 90vw;
         height: auto;
         animation: fadeIn 2s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .menu-content {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .menu-container .menu-content .left-side {
+        width: 40%;
+    }
+    .menu-container .menu-content .right-side {
+        width: 35%;
+    }
+    .menu-container .menu-content .left-side p{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu-container .menu-content .left-side {
+        width: 50%;
+    }
+    .menu-container .menu-content .right-side {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-container .menu-content .left-side {
+        width: 55%;
+    }
+    .menu-container .menu-content .right-side {
+        width: 40%;
+    }
+
+    .stat .flex img {
+        width: 20px;
+        height: auto;
+        margin-right: 9px;
+    }
+
+    .stat .flex h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .menu-container .menu-content .left-side {
+        width: 55%;
+    }
+
+    .menu-container .menu-content .left-side a{
+        display: none;
+    }
+    .menu-container .menu-content .left-side .seperator{
+        display: none;
+    }
+    .menu-container .menu-content .right-side {
+        width: 60%;
+    }
+    .menu-content {
+        width: 70vw;
+    }
+    .stat .flex img {
+        width: 20px;
+        height: auto;
+        margin-right: 9px;
+    }
+
+    .stat .flex h3 {
+        font-size: 0.9rem;
     }
 }
