@@ -100,6 +100,11 @@ Body{
     width: 100%;
 }
 
+.grid a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .character-container .character-selection .grid .character{
     display: flex;
     flex-direction: column;
@@ -123,6 +128,83 @@ Body{
 .character-container .character-selection .grid .character:hover .image-placeholder{
     box-shadow: rgba(178, 117, 208, 0.4) 0px 5px, rgba(178, 117, 208, 0.3) 0px 10px, rgba(178, 117, 208, 0.2) 0px 15px, rgba(178, 117, 208, 0.1) 0px 20px, rgba(178, 117, 208, 0.05) 0px 25px;
 }
+
+/* Game Dashboard Page */
+.menu-container {
+    display: flex;
+    align-items: stretch;
+    margin: 20px;
+    height: 46px;
+}
+
+.menu-container .left-border-shape{
+    margin-right: -1px;
+}
+
+.menu-container .right-border-shape{
+    margin-left: -1px;
+    transform: scale(-1, 1);
+}
+
+.menu-content {
+    background: white;
+    height: 45.9px;
+    min-width: 200px;
+    width: 50vw;
+    flex: 1;
+}
+
+/* .border-left {
+    width: 83px;
+    height: 46px;
+    background: white;
+    clip-path: path('M 12 0 H 71 V 46 H 65 Q 56 46 48 42 L 12 0');
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+}
+
+.border-right {
+    width: 83px;
+    height: 46px;
+    background: white;
+    clip-path: path('M 12 0 H 71 V 46 H 65 Q 56 46 48 42 L 12 0');
+    transform: scaleX(-1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+} */
+
+
+/* .menu{
+    background-color: white;
+    border-radius: 0%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+} */
+
+
+/* .menu {
+    position: relative;
+    width: 1036px;
+    height: 46px;
+    background: white;
+    clip-path: path('M 0 0 L 1036 0 L 996 26 Q 996 46 976 46 L 60 46 Q 40 46 40 26 L 0 0');
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+} */
+
+/* .menu .left-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.menu .right-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+} */
 
 @media screen and (max-width: 900px) {
     .splash-screen .menu{
