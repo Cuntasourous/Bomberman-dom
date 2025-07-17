@@ -56,7 +56,33 @@
                         <path d="M0 0H68.6997V45.7671H52.8348C44.044 45.7671 35.6956 41.9114 29.9957 35.219L0 0Z" fill="white" />
                     </svg>
                 </div>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="chat-container">
+                <div class="chat-drawer">
+                    <p class="player-font">Chat</p>
+                </div>
+                <div class="chat-sidebar">
+
+                </div> 
+            </div>
+            <div class="game-area">
+                <div class="game-board">
+                    <!-- Game board content goes here -->
+                </div>
+            </div>
+            <div class="player-stats-sidebar">
+
+            </div>
         </div>
     </div>
+    <script>
+        const chatDrawer = document.querySelector('.chat-drawer');
+        const chatContainer = document.querySelector('.chat-container');
+        chatDrawer.addEventListener('click', () => {
+            chatContainer.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

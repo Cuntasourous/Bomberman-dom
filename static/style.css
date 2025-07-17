@@ -4,6 +4,7 @@ Body{
     margin: 0 auto;
     padding: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 @font-face {
@@ -225,6 +226,79 @@ Body{
     width: 30px;
     height: auto;
     margin-right: 9px;
+}
+
+/* Game Area */
+.dashboard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    margin-top: 25px;
+}
+
+.chat-container{
+    width: 15vw;
+    height: 91vh;
+    display: flex;
+    align-items: end;
+    position: relative;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.chat-sidebar{
+    width: 100%;
+    height: 90vh;
+    background-color: #ffffffd2;
+    border-radius: 0px 20px 0px 0px ;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.chat-drawer{
+    width: 180px;
+    height: 30px;
+    background-color: #ffffffd2;
+    border-radius: 60px 60px 00px 0px;
+    transform: rotate(90deg);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    margin-left: 155.9px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.chat-drawer p{
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.chat-drawer p:hover{
+    color: #F6265A;
+}
+
+.active{
+    margin-left: -232px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.game-area{
+    width: 65vw;
+    height: 86vh;
+    background-color: darkgray;
+}
+
+.player-stats-sidebar{
+    width: 15vw;
+    height: 91vh;
+    background-color: #ffffffd2;
+    /* position: fixed; */
+    bottom: 0;
+    border-radius: 20px 0px 0px 20px ;
 }
 
 @media screen and (max-width: 900px) {
